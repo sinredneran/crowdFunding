@@ -1,0 +1,543 @@
+:root{
+    /* Primary */
+    --moderateCyan:hsl(176, 50%, 47%);
+    --darkCyan:hsl(176, 72%, 28%);
+    /* Neutral */
+    --black:black;
+    --darkGray:hsl(0, 0%, 45.9%);
+}
+
+
+html{
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    /* overflow-x:hidden; */
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-size: 1rem;
+    background: #fafafa;
+    overflow-x: hidden;
+    }
+body::after{
+    content: '';
+    top: 0;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.6) , #0000);
+    width: 100vw;
+    height: 8.125rem;
+    z-index: -1;
+}
+body::before{
+    content: '';
+    position: absolute;
+    background:hsl(176, 72%, 28%) url('image-hero-desktop.jpg') no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 400px;
+    z-index: -2;
+}
+.outOfModal{
+    display: flex;
+    flex-direction: column;
+}
+.noScroll-Body{
+    overflow: hidden;
+}
+nav{
+    position: relative;
+    top: 3rem;
+    display:  flex;
+    justify-content: space-around;
+}
+.side-nav a{
+    position: relative;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    margin-right:2.125rem;
+}
+
+.side-nav a::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    transition:all 300ms ease-in-out;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+}
+.side-nav a:hover::before{
+    border-radius: 10px;
+    left: 0%;
+    right:0%;
+    background: var(--moderateCyan);
+    box-shadow: 0 0 50px 10px;
+}
+/* Projects Styling */
+.project{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 18.75rem;
+    background: white;
+    border: 2px #f5f5f5 solid;
+    border-radius: 0.625rem;
+
+    padding: 3.5rem 3rem;
+    
+    margin:0 18vw;
+    
+    margin-bottom: 1.5rem;
+
+    max-width: 68ch;
+}
+/* Project Name section */
+.projectName{
+    text-align: center;
+}
+.projectName>svg{
+    position: absolute;
+    top: -10%;
+}
+.projectName h1{
+    font-size: 1.5625rem;
+    font-weight: 700;
+    margin:0 0 1.5rem 0;
+}
+.projectName > p{
+    margin-bottom: 2rem;
+}
+.littleText{
+    color: var(--darkGray);
+    font-weight: 400;
+    line-height: 1.8;
+}
+.specialDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+.btn,.backed{
+    height: 3.5rem;
+    border-radius: 3.125rem;
+    border: none;
+    width: 12.75rem;
+    background: var(--moderateCyan);
+    color: white;
+    font-weight: 700;
+}
+.backed:focus, .btn:focus{
+    transition: all 300ms;
+    background: var(--darkCyan);
+}
+.book{
+    position: relative;
+}
+.bookmark{
+    height: 3.5rem;
+    width: 10.75rem;
+    text-align: left;
+    border: none;
+    background: #f4f4f4;
+    border-radius: 3.125rem;
+}
+.bookmark p{
+    position: absolute;
+    font-weight: 700;
+    color: var(--darkGray);
+    top: 1.25rem;
+    left: 4.5rem;
+}
+.btn , .bookmark, .open{
+    cursor: pointer;
+}
+.svgBk{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Fund Raised Section*/
+
+
+.projectFund{
+    align-items: center;
+    align-content: space-between;
+}
+.internal{
+    align-self: center;
+    position: relative;
+    padding: 0rem 3rem 3rem;
+    top: -10%;
+}
+.internal:last-of-type{
+    right: -3rem;
+}
+#verLine{
+    background:lightgray;
+    position: absolute;
+    top: 10%;
+    width: 1px;
+    height: 4rem;
+    left: 100%;
+}
+.biggerText{
+    font-size:2rem;
+    padding: 5px 0;
+    font-weight: 700;
+}
+.progressBg,.progress-done{
+    position: relative;
+    top: 75%;
+    left: 5%;
+    width: 90%;
+    height: 0.75rem;
+    background: #f5f5f5;
+    border-radius: 3.125rem;
+}
+.progress-done{
+    background: var(--moderateCyan);
+    width: 0;
+    top: 0;
+    left: 0;
+    transition: 1.5s ease-out;
+}
+.int{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* About Section*/
+
+.about{
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.innerAbout{
+    position: relative;
+}
+.innerAbout h1{
+    text-align: left;
+    line-height: calc(1.6*3);
+    font-size: 1.25rem;
+}
+.moreDetail{
+    margin: 2rem 0;
+}
+
+/* Pledges */
+.pledges{
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pledges button{
+    margin-bottom: 1rem;
+}
+.width85{
+    width: 92%;
+}
+.innerText{
+    position: relative;
+    display: flex;
+    /* outline: 1px solid red; */
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+.pledgePrice{
+    color: var(--moderateCyan);
+    font-weight: 500;
+}
+.productLeft{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reward_btn{
+    width: 9.5rem;
+    height: 3rem;
+}
+.leftWritten{
+    margin-left: 1%;
+    width: 90%;
+    align-self: center;
+    font-size: 0.875rem;
+    color: var(--darkGray);
+}
+
+
+/* TOGGLE */
+.btnBookmarked p{
+    transition: all 300ms;
+    color: var(--darkCyan);
+}
+.btnBookmarked ~ .svgBk circle{
+    fill: var(--darkCyan);
+}
+.btnBookmarked ~ .svgBk path {
+    transition: all 300ms;
+    fill: white;
+}
+/* TOGGLE END*/
+
+/* M O D A L */
+.bgModal,.bgThanks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.5);
+    pointer-events: none;
+    overflow-y: scroll;
+    opacity: 0;
+    z-index: 3;
+}
+.modal{
+    max-width: 68ch;
+    align-self: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 18vw;
+    border-radius: 10px;
+    background: white;
+    padding: 56px 3.125rem;
+    top: 130px;
+    /* scrollbar setting  */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* scrollbar setting  */
+    opacity: 1;
+    z-index: 10;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal::-webkit-scrollbar{
+    display: none;
+}
+.close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.close path:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.modal h2{
+    margin-bottom: 26px;
+}
+/* M O D A L */
+/* MODAL  P L E D G E S */
+.modalPledge,.noReward{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.25rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+    .first-half{
+        top: -1rem;
+        left: 2.25rem;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 0.75rem;
+        padding-bottom: 0;
+    }
+    .modalPledge:hover{
+        border-color: var(--moderateCyan);
+    }
+    
+    .noReward:hover{
+        border-color: var(--moderateCyan);
+    }
+    
+    .first-half p{
+        padding-right: 34px;
+        
+    }
+    
+    .first-half:hover{
+        color: var(--moderateCyan);
+    } 
+    
+/* MODAL  P L E D G E S */
+/* C H E C K B O X */
+    .checkbox,.CB{
+        display: none;
+        opacity: 1;
+        position: absolute;
+    }
+    .checkmark{
+        position: absolute;
+        top: 1rem;
+        left: 0.75rem;
+        margin-right: 1rem;
+        flex-basis: 48px;
+        height: 24px;
+        width: 24px;
+        margin-right: 24px;
+        border-radius: 50%;
+        border: 1px solid lightgray;
+    }
+    .checkbox:hover ~.checkmark{
+        border-color: var(--moderateCyan);
+    }
+    .CB:hover ~.checkmark{
+        border-color: var(--moderateCyan);
+    }
+    .checkbox:checked ~.checkmark{
+        box-shadow: inset 0 0 0 6px white;
+        background: var(--moderateCyan);
+    }
+    .CB:checked ~.checkmark{
+        box-shadow: inset 0 0 0 6px white;
+        background: var(--moderateCyan);
+    }
+/* C H E C K B O X */
+.hrLine{
+    position: absolute;
+    left: 0;
+    top: 65%;
+    width: 100%;
+    height: 1px;
+    background:lightgray;
+}
+/* C O L L A P S E */
+.second-half{
+    display: none;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+    .numberZone{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+    }
+    .continue,.priceInput{
+        height: 2.75rem;
+        width: 6.75rem;
+    }
+    input[type='number']{
+        appearance: textfield;
+        border-radius: 10px;
+        height: 16px;
+        font-weight: 700;
+        border:none;
+        width:2.5625rem;
+        margin-left: 0.5rem;
+    }
+    .priceInput{
+        caret-color: var(--moderateCyan);
+        position: relative;
+        cursor: pointer;
+        border: 1px solid var(--moderateCyan);
+        border-radius: 50px;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        padding: 10px;
+    }
+    .h4p h4{
+        margin-bottom: 1rem;
+    }
+    .h4p h4 span{
+        color: hsl(176, 50%, 47%);
+        margin-left: 1rem;
+    }
+    .checkbox:checked ~ .second-half{
+        display: flex;
+    }
+    .CB:checked ~ .second-half{
+        display: flex;
+    }
+/* C O L L A P S E */    
+.modal--productLeft{
+    top: 0.75rem;
+    right: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.modal--productLeft h3{
+    margin-right: 0.5rem;
+}
+
+/* success section styling */
+
+.thanks{
+    display: flex;
+    position: absolute;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    width: 50ch;
+    padding: 1.5rem;
+    text-align: center;
+}
+:is(.thanks) :is(svg , h3 , p){
+    margin-bottom: 1rem;
+}
+.thanks button{
+    width: 6.75rem;
+}
+
+.pepe{
+    position: relative;
+}
+.dead{
+    top: 0;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.dead2{
+    pointer-events: none;
+}
+
+
+.burger{
+    display: none;
+}

@@ -1,0 +1,177 @@
+@media only screen and (max-width:768px){
+    body{
+        font-size: 14px;
+    }
+    body::before{
+        background: url('image-hero-mobile.jpg') no-repeat;
+        background-size: cover;
+    }
+    .project{
+        flex-direction: column;
+        margin: 1.5rem;
+        padding: 2.625rem 1.375rem;
+    }
+    .bookmark{
+        opacity: 0;
+        height: 56px;
+        width: 56px;
+        background-color: red;
+        border-radius: 150px;
+        z-index: 1;
+    }
+    .bookmark p{
+        display: none;
+    }
+    .book{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .svgBk{
+        align-self: center;
+    }
+    .int{
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    #verLine{
+        height: 1px;
+        width: 50%;
+        left: 25%;
+        top: 80%;
+    }
+    .internal:last-of-type{
+        right: 0rem;
+    }
+    .innerText{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .pledgePrice{
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+    .productLeft{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+    }
+    .leftWritten{
+        position: absolute;
+        top: 15%;
+        left: 20%;
+    }
+    .modal{
+        margin: 24px;;
+        padding: 24px;
+    }
+    .second-half{
+        flex-direction: column;
+    
+    }
+    .second-half p{
+        margin-bottom: 10px;
+    }
+    .numberZone{
+        width: 100%;
+    }
+    .h4p{
+        position: relative;
+    }
+    .h4p h4 span{
+        position: absolute;
+        top: 20px;
+        left: -15px;
+    }
+    .h4p p{
+        margin-top: 30px;
+        margin-left: -30px;
+    }
+    .modal--productLeft{
+        margin-top: 10.625rem;
+        left: 0;
+    }
+    nav{
+        flex-direction: column;
+        position: relative;
+        margin: 0 1rem;
+    }
+    .side-nav{
+        display: none;
+        flex-direction: column;
+        background: white;
+        border-radius: 10px;
+        width: 100%;
+        margin: 1.5rem 0;
+        position: absolute;
+        top: 1rem;
+    }
+    .side-nav::before{
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        background: linear-gradient(rgba(0, 0, 0, 0.6) , #0000);
+        top: -100px;
+        left: -1rem;
+    }
+    .side-nav a{
+    
+        color: black;
+        font-weight: 500;
+        margin: 0 1rem;
+    }
+    .side-nav a::before{
+        content: none;
+    }
+    .lines{
+        width: 100%;
+        left: 0rem;
+        height: 1px;
+        background:lightgray;
+        display: block;
+        margin: 1rem 0;
+    }
+    .lines:first-of-type{
+        margin-top: 0;
+        opacity: 0;
+    }
+    .lines:last-of-type{
+        margin-bottom: 0;
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        cursor: pointer;
+    }
+    .stripe{
+        height: 3px;
+        width: 1rem;
+        margin-bottom: 3px;
+        background: white;
+        transition: all 150ms ease-in-out;
+    }
+    .stripe:last-of-type{
+        margin-bottom: 0;
+    }
+    .burgerClose ~ .side-nav{
+        display: block;
+    }
+    .burgerClose .s1{
+        width: 1rem;
+        transform: rotate(45deg) translate(4px , 4px) ;
+    }
+    .burgerClose .s2{
+        display: none;
+    }
+    .burgerClose .s3{
+        transform:rotate(-45deg);
+    }
+}
